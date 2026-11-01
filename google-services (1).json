@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163689594210",
+    "project_id": "whatsapp-rs-5670c",
+    "storage_bucket": "whatsapp-rs-5670c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163689594210:android:6e03914e81955f9379003b",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_rs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Hl67UsR0ltcx5wKanO-FCiyiTIggf-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
