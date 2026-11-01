@@ -1,3 +1,4 @@
+
 name: Build WhatsApp RS APK
 
 on:
@@ -13,11 +14,13 @@ jobs:
         with:
           channel: stable
 
-      - name: Build APK
+      - name: Prepare and Build APK
         run: |
           unzip -q WhatsApp_RS_Flutter_Starter.zip
           cd whatsapp_rs
           flutter create . --platforms=android
+          mkdir -p android/app
+          cp ../google-services.json android/app/google-services.json
           flutter pub get
           flutter build apk --release
 
@@ -25,3 +28,10 @@ jobs:
         with:
           name: WhatsApp-RS-APK
           path: whatsapp_rs/build/app/outputs/flutter-apk/app-release.apk
+permissions: <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
